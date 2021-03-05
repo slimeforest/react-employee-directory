@@ -1,5 +1,5 @@
 import { useEffect, useContext } from 'react';
-import { EmployeeContext } from "../components/EmployeeContext"
+import { EmployeeContext } from "../components/EmployeeContext/EmployeeContext"
 import axios from "axios"
 
 export function useGet(url) {

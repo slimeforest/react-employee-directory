@@ -2,7 +2,7 @@ import React from 'react';
 import Search from "../Search/Search"
 import "../NavBar/NavBar.css"
 
-function Navbar(){
+function NavBar(){
     return(
         <div className="navbar">
             <div className="logo bold">Employee Directory</div>
@@ -13,4 +13,4 @@ function Navbar(){
         </div>
     )
 }
-export default Navbar;
+export default NavBar;

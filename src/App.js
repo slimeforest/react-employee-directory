@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+
 import './App.css';
+import NavBar from "./components/NavBar/NavBar"
+import Table from "./components/Table/Table"
+import { EmployeeContext } from "./components/EmployeeContext/EmployeeContext"
 
 function App() {
+  const [employees, setEmployees] = useState([]);
+  const [displayedEmployees, setDisplayedEmployees] = useState([])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <EmployeeContext.Provider value={{employees, setEmployees, displayedEmployees, setDisplayedEmployees}}>
+        <NavBar />
+        <Table />
+      </EmployeeContext.Provider>
     </div>
   );
 }
