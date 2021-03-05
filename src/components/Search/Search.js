@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import { EmployeeContext } from './EmployeeContext.js';
+import { EmployeeContext } from '../EmployeeContext/EmployeeContext';
 
 function Search(){
     const [search, setSearch] = useState("")
